@@ -62,10 +62,10 @@
     <button id="takePhoto">Tomar foto</button>
   </div>
 
-  <script src="app.js"></script>
+  <script src="/camara_pwa/app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
+      navigator.serviceWorker.register('/camara_pwa/sw.js')
         .then(() => console.log('Service Worker registrado'))
         .catch(err => console.log('Error al registrar SW:', err));
     }

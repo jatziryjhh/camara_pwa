@@ -1,11 +1,21 @@
-const CACHE_NAME = 'camara-pwa-v2';
+const CACHE_NAME = 'camara-pwa-v1';
 const urlsToCache = [
+  /*
   './',
   './index.html',
   './app.js',
   './manifest.json',
   './images/192.png',
-  './images/512.png'
+  './images/512.png',
+  './styles.css'
+  */
+  '/camara-pwa/',
+  '/camara-pwa/index.html',
+  '/camara-pwa/app.js',
+  '/camara-pwa/manifest.json',
+  '/camara-pwa/images/192.png',
+  '/camara-pwa/images/512.png',
+  '/camara-pwa/styles.css'
 ];
 
 // Instalar Service Worker

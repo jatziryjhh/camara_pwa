@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cámara PWA</title>
-  <meta name="theme-color" content="#ffb6d9">
+  <meta name="theme-color" content="#ff78c6">
 
   <link rel="manifest" href="./manifest.json">
 
@@ -13,57 +13,67 @@
     body {
       font-family: "Poppins", sans-serif;
       text-align: center;
-      background: #ffe4f1;
+      background: linear-gradient(135deg, #ffd6e8, #ff9ace);
       margin: 0;
       padding: 20px;
-      color: #d63384;
+      color: #c21875;
     }
 
     h1 {
       margin-bottom: 15px;
-      font-weight: 700;
-      text-shadow: 1px 1px 2px #fff;
+      font-weight: 800;
+      color: #d80f84;
+      text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
     }
 
     #cameraContainer {
       display: none;
-      margin-top: 20px;
+      margin-top: 25px;
+      background: #ffffffaa;
+      padding: 18px;
+      border-radius: 20px;
+      max-width: 380px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0px 8px 20px rgba(255, 0, 140, 0.25);
+      border: 2px solid #ff9ad4;
     }
 
     video,
     canvas {
-      border: 3px solid #ffb6d9;
-      border-radius: 15px;
+      border: 3px solid #ff7ec4;
+      border-radius: 20px;
       margin-top: 10px;
-      width: 90%;
-      max-width: 350px;
+      width: 100%;
       height: auto;
       object-fit: cover;
       aspect-ratio: 3/4;
-      box-shadow: 0 4px 12px rgba(255, 143, 203, 0.6);
+      box-shadow: 0px 6px 14px rgba(255, 59, 177, 0.4);
     }
 
     button {
-      padding: 12px 22px;
+      padding: 12px 25px;
       border: none;
-      border-radius: 25px;
-      background: linear-gradient(135deg, #ff8ac9, #ff5fa7);
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ff74cd, #ff3ea8);
       color: white;
       cursor: pointer;
-      margin: 8px;
+      margin: 10px;
       font-size: 15px;
-      transition: transform .2s, box-shadow .2s;
+      font-weight: 600;
+      transition: 0.2s;
+      box-shadow: 0px 4px 10px rgba(255, 64, 165, 0.5);
     }
 
     button:hover {
-      transform: scale(1.08);
-      box-shadow: 0px 4px 10px rgba(255, 100, 180, 0.6);
+      transform: scale(1.1);
+      box-shadow: 0px 6px 15px rgba(255, 64, 165, 0.8);
     }
 
     button:disabled {
-      background: #d1a5bd;
-      cursor: not-allowed;
+      background: #d9a3c7;
       box-shadow: none;
+      cursor: not-allowed;
     }
 
     #photoContainer {
@@ -71,29 +81,27 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 12px;
     }
 
     #photoContainer img {
-      width: 150px;
-      height: auto;
-      margin: 10px;
-      border-radius: 15px;
-      border: 3px solid #ffafd8;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(255, 140, 205, 0.6);
+      width: 160px;
+      border-radius: 18px;
+      border: 3px solid #ff85c9;
+      box-shadow: 0px 6px 15px rgba(255, 64, 165, 0.45);
     }
   </style>
 </head>
 
 <body>
-  <h1>✨ Cámara PWA ✨</h1>
+  <h1>🎀 Cámara PWA 🎀</h1>
 
   <button id="openCamera">📸 Abrir Cámara</button>
 
   <div id="cameraContainer">
     <video id="video" autoplay playsinline></video>
     <br>
-    <button id="takePhoto">🌸 Tomar Foto</button>
+    <button id="takePhoto">✨ Tomar Foto ✨</button>
   </div>
 
   <div id="photoContainer"></div>
